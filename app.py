@@ -1,10 +1,11 @@
 import streamlit as st
 import pdfplumber
 import io
+import os
 from openai import OpenAI
 
 # ── CONFIG ────────────────────────────────────────────
-OPENAI_KEY = "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"
+OPENAI_KEY = os.environ.get("OPENAI_API_KEY", "")
 client = OpenAI(api_key=OPENAI_KEY)
 
 # ── PAGE CONFIG ───────────────────────────────────────
